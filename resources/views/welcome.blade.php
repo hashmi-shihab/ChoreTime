@@ -62,38 +62,51 @@
                 margin-bottom: 30px;
             }
         </style>
+        <!-- Bootstrap CSS-->
+        <link href="{{ asset('bootstrap-4.3.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bootstrap-4.3.1-dist/css/bootstrap-grid.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md" style="">
+                    <img src="{{asset('Washer-dryer_Lead.jpg')}}" height="600px" width="1345px">
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="container-fluid">
+                    <h1>NOTICE</h1>
+                    <hr style="width: 10%">
+                    <div class="card-body" style="background: #b7e2a2;margin: 0px 300px 0px 300px;text-align: left;padding: 5px 0px 5px 0px">
+                        <ul style="">
+                            <li>Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li>
+                            <li>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida</li>
+                            <li>Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li>
+                            <li>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida</li>
+                            <li>Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li>
+                            <li>Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida</li>
+                        </ul>
+                    </div>
+                    <div class="row" style="margin: 20px 0px 20px 440px">
+                        @if (Route::has('login'))
+                            @auth
+                                <a class="btn btn-outline-info btn-sm col-md-3" style="margin-left: 110px" href="{{ url('/home') }}">Home</a>&nbsp&nbsp
+                            @else
+                                <a class="btn btn-outline-info btn-sm col-md-3" href="{{ route('login') }}">Login</a>&nbsp&nbsp
+
+                                @if (Route::has('register'))
+                                    <a class="btn btn-outline-success btn-sm col-md-3" href="{{ route('register') }}">Register</a>
+                                @endif
+                            @endauth
+                    @endif
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Bootstrap JS-->
+        <script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.min.js')}}"></script>
     </body>
 </html>
