@@ -47,15 +47,15 @@
                         @elseif($l_id == 5)
                             <input type="text" class="form-control" value="Laundry-5" readonly>
                         @endif
-                        <input type="hidden" name="c_id" value="{{$l_id}}">
+                        <input type="hidden" name="l_id" value="{{$l_id}}">
                     </div>
                     <div class="form-group col-md-4">
                         <label class="required-field">Choose Date &nbsp</label>
-                        <input type="text" class="form-control" name="c_date" id="datepicker" placeholder="Please Enter Appointment Date" required>
+                        <input type="text" class="form-control" name="l_date" id="datepicker" placeholder="Please Enter Appointment Date" required>
                     </div>
                     <div class="form-group col-md-3">
                         <label class="required-field">Choose Time Slot &nbsp</label>
-                        <select class="form-control" name="c_time" required>
+                        <select class="form-control" name="l_time" required>
                             <option value="" selected disabled>Select Time Slot</option>
                             <option>06:00-07:00</option>
                             <option>07:00-08:00</option>

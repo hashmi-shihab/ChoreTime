@@ -101,7 +101,7 @@ class ListController extends Controller
         $users_id = Auth::id();
         $cookingAppointments = CookingAppointment::select()->where('users_id',$users_id)->get();
         $laundryAppointments = LaundryAppointment::select()->where('users_id',$users_id)->get();
-
+//dd($laundryAppointments);
         return view('appointmentList',compact('cookingAppointments','laundryAppointments'));
     }
 }

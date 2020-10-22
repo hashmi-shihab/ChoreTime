@@ -38,19 +38,19 @@
                 @if($laundryAppointments)
                     @foreach($laundryAppointments as $laundryAppointment)
                         <tr>
-                            <td>@if($cookingAppointment->l_id ==1)
+                            <td>@if($laundryAppointment->l_id ==1)
                                     Laundry-1
-                                @elseif($cookingAppointment->l_id ==2)
+                                @elseif($laundryAppointment->l_id ==2)
                                     Laundry-2
-                                @elseif($cookingAppointment->l_id ==3)
+                                @elseif($laundryAppointment->l_id ==3)
                                     Laundry-3
-                                @elseif($cookingAppointment->l_id ==4)
+                                @elseif($laundryAppointment->l_id ==4)
                                     Laundry-4
-                                @elseif($cookingAppointment->l_id ==5)
+                                @elseif($laundryAppointment->l_id ==5)
                                     Laundry-5
                                 @endif</td>
-                            <td>{{$laundryAppointments->l_date}}</td>
-                            <td>{{$laundryAppointments->l_time}}</td>
+                            <td>{{$laundryAppointment->l_date}}</td>
+                            <td>{{$laundryAppointment->l_time}}</td>
                         </tr>
                     @endforeach
                 @endif
