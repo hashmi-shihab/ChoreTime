@@ -91,12 +91,12 @@
                     <div class="row" style="margin: 20px 0px 20px 440px">
                         @if (Route::has('login'))
                             @auth
-                                <a class="btn btn-outline-info btn-sm col-md-3" style="margin-left: 110px" href="{{ url('/home') }}">Home</a>&nbsp&nbsp
+                                <a class="btn btn-outline-info btn-sm col-md-3" style="margin-left: 110px" href="{{ url('/home') }}">Dashboard</a>&nbsp&nbsp
                             @else
                                 <a class="btn btn-outline-info btn-sm col-md-3" href="{{ route('login') }}">Login</a>&nbsp&nbsp
 
                                 @if (Route::has('register'))
-                                    <a class="btn btn-outline-success btn-sm col-md-3" href="{{ route('register') }}">Register</a>
+                                    <a class="btn btn-outline-success btn-sm col-md-3" href="{{ route('register') }}">Sign Up</a>
                                 @endif
                             @endauth
                     @endif

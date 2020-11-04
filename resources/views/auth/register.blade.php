@@ -38,6 +38,45 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="birth_date" class="col-md-4 col-form-label text-md-right">{{ __('Date of Birth') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="birth_date" type="date" class="form-control @error('birth_date') is-invalid @enderror" name="birth_date" value="{{ old('birth_date') }}" required autocomplete="birth_date">
+
+                                @error('birth_date')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="room_no" class="col-md-4 col-form-label text-md-right">{{ __('Room No') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="room_no" type="number" class="form-control @error('room_no') is-invalid @enderror" name="room_no" value="{{ old('room_no') }}" required autocomplete="room_no" min="1">
+
+                                @error('room_no')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="institute" class="col-md-4 col-form-label text-md-right">{{ __('Educational Institution') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="institute" type="text" class="form-control @error('institute') is-invalid @enderror" name="institute" value="{{ old('institute') }}" required autocomplete="institute">
+
+                                @error('institute')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -77,7 +116,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Sign Up') }}
                                 </button>
                             </div>
                         </div>

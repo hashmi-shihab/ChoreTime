@@ -56,16 +56,31 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('laundryList') }}">{{ __('Laundry List') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('cookingList') }}">{{ __('Burner List') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('userAppointmentList') }}">{{ __('Appointment List') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('home') }}">Home</a>
+                                    {{--<a class="dropdown-item" href="{{ route('home') }}">Home</a>
                                     <a class="dropdown-item" href="{{ route('laundryList') }}">Laundry List</a>
                                     <a class="dropdown-item" href="{{ route('cookingList') }}">Burner List</a>
-                                    <a class="dropdown-item" href="{{ route('userAppointmentList') }}">Appointment List</a>
+                                    <a class="dropdown-item" href="{{ route('userAppointmentList') }}">Appointment List</a>--}}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

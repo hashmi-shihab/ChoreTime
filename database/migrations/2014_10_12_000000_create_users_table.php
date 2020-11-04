@@ -17,6 +17,9 @@ class CreateUsersTable extends Migration
             $table->integer('id',11)->unsigned();
             $table->string('name');
             $table->string('email')->unique();
+            $table->date('birth_date');
+            $table->integer('room_no');
+            $table->string('institute');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('image');
