@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div style="border: solid black;margin-left:50px;margin-right: 50px">>
+        <div style="border: solid black;margin-left:50px;margin-right: 50px">
             <h1 style="text-align: center">Laundry List</h1>
             <hr style="width: 20%">
             <div class="box" style="padding: 10px 400px 0px 400px">

@@ -16,6 +16,7 @@
                     </thead>
                     <tbody>
                     @if($cookingAppointments)
+
                         @foreach($cookingAppointments as $cookingAppointment)
                             <tr>
                                 <td>

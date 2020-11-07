@@ -12,10 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
-
+Route::get('userInfoEdit', 'ListController@userInfoEdit')->name('userInfoEdit');
+Route::get('aboutUs', 'ListController@aboutUs')->name('aboutUs');
+Route::post('userInfoUpdate', 'ListController@userInfoUpdate')->name('userInfoUpdate');
 Route::get('cookingList', 'ListController@cookingList')->name('cookingList');
+Route::get('createAppointment', 'ListController@createAppointment')->name('appointment');
 Route::get('cookingCreate/{id}', 'ListController@cookingCreate')->name('cookingCreate');
 Route::post('cookingAppointment', 'ListController@cookingAppointment')->name('cookingAppointment');
 Route::get('laundryList', 'ListController@laundryList')->name('laundryList');

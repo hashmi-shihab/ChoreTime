@@ -27,8 +27,8 @@
 
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" style="border: solid black;margin: 5px">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="margin: 50px;border: solid black">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -52,15 +52,15 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
+                                <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                                <a class="nav-link" href="{{ route('appointment') }}">{{ __('Appointment') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('laundryList') }}">{{ __('Laundry List') }}</a>
@@ -71,16 +71,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('userAppointmentList') }}">{{ __('Appointment List') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    {{--<a class="dropdown-item" href="{{ route('home') }}">Home</a>
-                                    <a class="dropdown-item" href="{{ route('laundryList') }}">Laundry List</a>
-                                    <a class="dropdown-item" href="{{ route('cookingList') }}">Burner List</a>
-                                    <a class="dropdown-item" href="{{ route('userAppointmentList') }}">Appointment List</a>--}}
+                                    <a class="dropdown-item" href="{{ route('userInfoEdit') }}">Setting</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

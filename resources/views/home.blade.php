@@ -3,16 +3,12 @@
 @section('content')
 <div class="container" style="border: solid black">
     <div class="row" style="padding: 5px">
-        <div class="col-md-6">
-            <a href="{{route('cookingList')}}" class="col-md-5 btn btn-outline-warning" style="text-align: center;height: 40px;padding: 60px 0px 95px 0px;">
-                Burner
-            </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <a href="{{route('laundryList')}}" class="col-md-5 btn btn-outline-danger" style="text-align: center;height: 40px;padding: 60px 0px 95px 0px;">
-                laundry
-            </a>
+        <div class="col-md-7 card" style="text-align: center;border: solid black">
+            <h1 style="margin-top: 175px">News Feed Under Construction</h1>
         </div>
+        <div class="col-md-1"></div>
 
-        <div class="col-md-6 card" style="background-color: #e0eee6;text-align: center">
+        <div class="col-md-4 card" style="text-align: center;border: solid black;">
             <h2>Student Profile</h2>
             <hr style="margin: 0px 20px 10px 20px">
             <div class="row" style="text-align: center">
