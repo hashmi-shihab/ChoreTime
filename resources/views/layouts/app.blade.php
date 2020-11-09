@@ -27,7 +27,7 @@
 
 </head>
 <body>
-    <div id="app" style="border: solid black;margin: 5px">
+    <div id="app" style="background-color: white;margin: 5px">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="margin: 50px;border: solid black">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

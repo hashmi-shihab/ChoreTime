@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="border: solid black">
+<div class="container" >
     <div class="row" style="padding: 5px">
         <div class="col-md-7 card" style="text-align: center;border: solid black">
-            <h1 style="margin-top: 175px">News Feed Under Construction</h1>
+            <h1 style="margin-top: 75px">News Feed Under Construction</h1>
+            <h4 style="margin-top: 75px">Updates from the dorm manager will appear here.</h4>
         </div>
         <div class="col-md-1"></div>
 
