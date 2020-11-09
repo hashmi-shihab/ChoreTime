@@ -47,70 +47,58 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
-                                </li>
-                            @endif
+                        
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('appointment') }}">{{ __('Appointment') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('laundryList') }}">{{ __('Laundry List') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('cookingList') }}">{{ __('Burner List') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('userAppointmentList') }}">{{ __('Appointment List') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('appointment') }}">{{ __('Appointment') }}</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('aboutUs') }}">{{ __('About Us') }}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('userInfoEdit') }}">Setting</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('userInfoEdit') }}">Setting</a>
+                                <a class="dropdown-item" href="{{ route('userAppointmentList') }}">{{ __('Appointment History') }}</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-    <!-- jquery-->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('datepicker/datepicker.js')}}"></script>
+    <main class="py-4">
+        @yield('content')
+    </main>
+</div>
+<!-- jquery-->
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('datepicker/datepicker.js')}}"></script>
 
-    <!-- Bootstrap JS-->
-    <script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.min.js')}}"></script>
+<!-- Bootstrap JS-->
+<script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('bootstrap-4.3.1-dist/js/bootstrap.min.js')}}"></script>
 
 
-    @yield('jsScript')
+@yield('jsScript')
 </body>
 </html>
