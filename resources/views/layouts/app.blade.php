@@ -26,8 +26,8 @@
     <link href="{{ asset('datepicker/jquery-ui.css') }}" rel="stylesheet">
 
 </head>
-<body>
-    <div id="app" style="background-color: white;margin: 5px">
+<body style="background-color: black;  margin-top: 0px!important">
+    <div id="app" >
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="margin: 50px;border: solid black">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
