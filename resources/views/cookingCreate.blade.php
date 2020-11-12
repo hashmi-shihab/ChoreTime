@@ -13,7 +13,7 @@
                         &times;
                     </button>
                     <h4><i class="icon fa fa-check"></i> Success!</h4>
-                    <strong>Burner</strong>
+                    <strong>Stove</strong>
                     {{session()->get('message')}}
                 </div>
                 @endif
@@ -23,7 +23,7 @@
                         &times;
                     </button>
                     <h4><i class="icon fa fa-ban"></i>Error!</h4>
-                    <strong>Burner</strong>
+                    <strong>Stove</strong>
                     {{session()->get('errorMessage')}}
                 </div>
                 @endif
@@ -35,18 +35,18 @@
                 <div class="row">
                     <div class="form-group col-md-2">
                         <label>
-                            Burner Name
+                            Stove Name
                         </label>
                         @if($c_id == 1)
-                        <input type="text" class="form-control" value="Burner-1" readonly>
+                        <input type="text" class="form-control" value="Stove-1" readonly>
                         @elseif($c_id == 2)
-                        <input type="text" class="form-control" value="Burner-2" readonly>
+                        <input type="text" class="form-control" value="Stove-2" readonly>
                         @elseif($c_id == 3)
-                        <input type="text" class="form-control" value="Burner-3" readonly>
+                        <input type="text" class="form-control" value="Stove-3" readonly>
                         @elseif($c_id == 4)
-                        <input type="text" class="form-control" value="Burner-4" readonly>
+                        <input type="text" class="form-control" value="Stove-4" readonly>
                         @elseif($c_id == 5)
-                        <input type="text" class="form-control" value="Burner-5" readonly>
+                        <input type="text" class="form-control" value="Stove-5" readonly>
                         @endif
                         <input type="hidden" name="c_id" value="{{$c_id}}">
                     </div>
